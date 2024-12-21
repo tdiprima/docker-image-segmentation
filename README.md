@@ -15,6 +15,9 @@ This Dockerfile sets up a CentOS-based environment with essential tools and libr
    - **OpenSlide** (openslide-3.4.1) for whole slide image support
    - **TODO:** ITK and OpenCV
 
+    <!--   - **Insight Toolkit** (ITK-4.10.0) for medical image analysis and registration
+   - **OpenCV** (opencv-2.4.13) for computer vision and image processing tasks-->
+
 3. **Other Utilities**:
    - `vim`, `wget`, `curl`, `git`, `zip`, `unzip`
    - Python 3 development tools and `numpy`

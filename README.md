@@ -13,10 +13,8 @@ This Dockerfile sets up a CentOS-based environment with essential tools and libr
    - **libtiff** (tiff-4.0.6) for TIFF image format support
    - **OpenJPEG** (openjpeg-2.1.0) for JPEG 2000 support
    - **OpenSlide** (openslide-3.4.1) for whole slide image support
-   - **TODO:** ITK and OpenCV
-
-    <!--   - **Insight Toolkit** (ITK-4.10.0) for medical image analysis and registration
-   - **OpenCV** (opencv-2.4.13) for computer vision and image processing tasks-->
+   - **OpenCV** (opencv-4x) for computer vision and image processing tasks
+   - **Insight Toolkit** (ITK-5.4.1) for medical image analysis and registration
 
 3. **Other Utilities**:
    - `vim`, `wget`, `curl`, `git`, `zip`, `unzip`

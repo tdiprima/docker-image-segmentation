@@ -45,7 +45,7 @@ RUN yum -y install cmake*
 WORKDIR /tmp/
 
 # Little cms color engine
-ENV LCMS=lcms2-2.8
+ENV LCMS=lcms2-2.16
 RUN curl -O -J -L http://downloads.sourceforge.net/lcms/$LCMS.tar.gz && \
 	tar -xzvf $LCMS.tar.gz && \
 	cd $LCMS && ./configure && \
@@ -53,7 +53,7 @@ RUN curl -O -J -L http://downloads.sourceforge.net/lcms/$LCMS.tar.gz && \
 	cd .. && rm -rf $LCMS*
 
 # Libtiff library for reading and writing Tagged Image File Format (TIFF) files.
-ENV LIBTIFF=tiff-4.0.6
+ENV LIBTIFF=tiff-4.0.10
 RUN curl -O -J -L http://download.osgeo.org/libtiff/$LIBTIFF.tar.gz && \
   	tar -xzvf $LIBTIFF.tar.gz && \
   	cd $LIBTIFF && ./configure && \
@@ -72,8 +72,8 @@ RUN curl -O -J -L https://sourceforge.net/projects/openjpeg.mirror/files/2.1.0/$
 ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
 
 # Library for reading whole slide image files
-ENV OPENSLIDE=openslide-3.4.1
-RUN curl -O -J -L https://github.com/openslide/openslide/releases/download/v3.4.1/$OPENSLIDE.tar.gz && \
+ENV OPENSLIDE=openslide-4.0.0
+RUN curl -O -J -L https://github.com/openslide/openslide/archive/refs/tags/v4.0.0.tar.gz && \
   	tar -xzvf $OPENSLIDE.tar.gz && \
   	cd $OPENSLIDE && \
   	./configure && \

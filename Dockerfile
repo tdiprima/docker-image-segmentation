@@ -119,7 +119,9 @@ RUN ln -s /usr/local/lib64/pkgconfig/opencv4.pc /usr/share/pkgconfig/ && \
 
 # Verify the installation
 RUN pkg-config --modversion opencv4
-# RUN ln -s /usr/local/lib/python*/site-packages/cv2  /usr/lib/python*/site-packages/
+
+# Add OpenCV Python bindings to the Python path
+RUN ln -s /usr/local/lib/python3.6/site-packages/cv2  /usr/lib/python3.6/site-packages/
 
 # Clean up
 RUN rm -rf /tmp/opencv_build
